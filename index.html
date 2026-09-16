@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>مصنع الصندل للأوعية البلاستيكية | البوابة الرقمية 2026</title>
+<meta name="description" content="البوابة الرقمية الرسمية لمصنع الصندل للأوعية البلاستيكية — أنظمة المرتبات، المواد الخام، الأكياس، والحبل.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23D4AF37'/%3E%3Cstop offset='1' stop-color='%233B82F6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='%2305070D'/%3E%3Ctext x='50' y='50' dy='0.36em' font-family='Arial' font-size='58' font-weight='900' fill='url(%23g)' text-anchor='middle'%3E%D8%B5%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ============ RESET & ROOT ============ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg-0:#05070D;
+  --bg-1:#0A0F1C;
+  --bg-2:#0F1522;
+  --text-0:#F5F7FA;
+  --text-1:#B8C2D4;
+  --text-2:#7A87A0;
+  --gold:#D4AF37;
+  --gold-2:#F4D77A;
+  --blue:#3B82F6;
+  --blue-2:#60A5FA;
+  --teal:#14B8A6;
+  --purple:#8B5CF6;
+  --glass:rgba(255,255,255,0.04);
+  --glass-2:rgba(255,255,255,0.06);
+  --border:rgba(255,255,255,0.08);
+  --border-2:rgba(255,255,255,0.12);
+  --ease:cubic-bezier(0.22,1,0.36,1);
+  --radius:24px;
+  --font:'Cairo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--font);
+  background:var(--bg-0);
+  color:var(--text-0);
+  direction:rtl;
+  min-height:100vh;
+  overflow-x:hidden;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  position:relative;
+}
+
+/* ============ AURORA BACKGROUND ============ */
+.aurora{
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  overflow:hidden;
+  pointer-events:none;
+}
+.aurora::before,.aurora::after{
+  content:'';
+  position:absolute;
+  border-radius:50%;
+  filter:blur(120px);
+  opacity:0.5;
+  will-change:transform;
+}
+.aurora::before{
+  width:800px;height:800px;
+  background:radial-gradient(circle,#1E40AF 0%,transparent 70%);
+  top:-300px;right:-200px;
+  animation:floatA 22s ease-in-out infinite;
+}
+.aurora::after{
+  width:700px;height:700px;
+  background:radial-gradient(circle,#7C3AED 0%,transparent 70%);
+  bottom:-250px;left:-200px;
+  animation:floatB 28s ease-in-out infinite;
+}
+.aurora-3{
+  position:fixed;
+  width:600px;height:600px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(20,184,166,0.35) 0%,transparent 70%);
+  filter:blur(130px);
+  top:40%;left:40%;
+  z-index:-2;
+  pointer-events:none;
+  animation:floatC 32s ease-in-out infinite;
+  opacity:0.5;
+}
+@keyframes floatA{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-80px,60px) scale(1.15)}}
+@keyframes floatB{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(100px,-80px) scale(1.1)}}
+@keyframes floatC{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-60px,-60px) scale(1.2)}}
+
+/* ============ GRID OVERLAY ============ */
+.grid-overlay{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse at center,black 30%,transparent 85%);
+  -webkit-mask-image:radial-gradient(ellipse at center,black 30%,transparent 85%);
+}
+
+/* ============ CURSOR GLOW ============ */
+.cursor-glow{
+  position:fixed;
+  width:500px;height:500px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(59,130,246,0.10) 0%,transparent 60%);
+  pointer-events:none;
+  z-index:1;
+  transform:translate(-50%,-50%);
+  transition:opacity .3s;
+  opacity:0;
+  mix-blend-mode:screen;
+}
+@media(hover:hover){.cursor-glow{opacity:1}}
+
+/* ============ CONTAINER ============ */
+.container{
+  max-width:1360px;
+  margin:0 auto;
+  padding:0 32px;
+  position:relative;
+  z-index:2;
+}
+
+/* ============ HEADER ============ */
+.header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  padding:18px 0;
+  background:rgba(5,7,13,0.55);
+  backdrop-filter:blur(20px) saturate(180%);
+  -webkit-backdrop-filter:blur(20px) saturate(180%);
+  border-bottom:1px solid var(--border);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.brand-logo{
+  width:52px;height:52px;
+  flex-shrink:0;
+  filter:drop-shadow(0 8px 24px rgba(212,175,55,0.35));
+  animation:pulseLogo 4s ease-in-out infinite;
+}
+@keyframes pulseLogo{
+  0%,100%{filter:drop-shadow(0 8px 24px rgba(212,175,55,0.3))}
+  50%{filter:drop-shadow(0 8px 36px rgba(212,175,55,0.6))}
+}
+.brand-text{display:flex;flex-direction:column;line-height:1.25}
+.brand-name{
+  font-size:1.05rem;
+  font-weight:800;
+  background:linear-gradient(90deg,#fff 0%,#F4D77A 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  letter-spacing:-0.01em;
+}
+.brand-sub{
+  font-size:0.68rem;
+  font-weight:600;
+  color:var(--gold);
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  opacity:0.85;
+}
+.header-actions{display:flex;align-items:center;gap:14px}
+.clock{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:0.8rem;
+  font-weight:600;
+  color:var(--text-1);
+  background:var(--glass);
+  border:1px solid var(--border);
+  padding:8px 18px;
+  border-radius:100px;
+  backdrop-filter:blur(12px);
+  white-space:nowrap;
+}
+.clock-dot{
+  width:7px;height:7px;
+  border-radius:50%;
+  background:#22C55E;
+  box-shadow:0 0 12px #22C55E;
+  animation:blink 2s ease-in-out infinite;
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.35}}
+.clock-time{
+  font-variant-numeric:tabular-nums;
+  color:var(--gold-2);
+  font-weight:700;
+}
+
+/* ============ HERO ============ */
+.hero{
+  padding:80px 0 60px;
+  text-align:center;
+  position:relative;
+}
+.hero-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:8px 22px;
+  border-radius:100px;
+  background:linear-gradient(90deg,rgba(212,175,55,0.10),rgba(59,130,246,0.10));
+  border:1px solid rgba(212,175,55,0.25);
+  font-size:0.78rem;
+  font-weight:600;
+  color:var(--gold-2);
+  letter-spacing:0.04em;
+  margin-bottom:28px;
+  animation:fadeUp .8s var(--ease) both;
+}
+.hero-badge span{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 10px var(--gold);
+  animation:blink 2s ease-in-out infinite;
+}
+.hero-logo-wrap{
+  display:flex;
+  justify-content:center;
+  margin-bottom:28px;
+  animation:fadeUp .9s var(--ease) .1s both;
+}
+.hero-logo{
+  width:120px;height:120px;
+  filter:drop-shadow(0 20px 60px rgba(212,175,55,0.4));
+  animation:floatLogo 6s ease-in-out infinite;
+}
+@keyframes floatLogo{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-12px)}
+}
+.hero-title{
+  font-size:clamp(2rem,5.5vw,4rem);
+  font-weight:900;
+  line-height:1.15;
+  letter-spacing:-0.03em;
+  margin-bottom:18px;
+  background:linear-gradient(135deg,#fff 0%,#F4D77A 40%,#60A5FA 70%,#fff 100%);
+  background-size:200% 200%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:gradientMove 8s ease infinite,fadeUp 1s var(--ease) .2s both;
+}
+@keyframes gradientMove{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.hero-sub{
+  font-size:clamp(1rem,2vw,1.4rem);
+  font-weight:600;
+  color:var(--text-1);
+  margin-bottom:14px;
+  animation:fadeUp 1s var(--ease) .3s both;
+}
+.hero-desc{
+  font-size:clamp(0.85rem,1.4vw,1rem);
+  color:var(--text-2);
+  max-width:640px;
+  margin:0 auto;
+  font-weight:400;
+  animation:fadeUp 1s var(--ease) .4s both;
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(24px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* ============ STATS ============ */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+  margin:50px auto 0;
+  max-width:900px;
+  animation:fadeUp 1s var(--ease) .5s both;
+}
+.stat{
+  background:var(--glass);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:20px 14px;
+  text-align:center;
+  backdrop-filter:blur(12px);
+  transition:all .4s var(--ease);
+}
+.stat:hover{
+  border-color:rgba(212,175,55,0.35);
+  background:var(--glass-2);
+  transform:translateY(-3px);
+}
+.stat-num{
+  font-size:1.6rem;
+  font-weight:800;
+  background:linear-gradient(135deg,#fff,var(--gold-2));
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-variant-numeric:tabular-nums;
+  line-height:1.2;
+}
+.stat-label{
+  font-size:0.72rem;
+  font-weight:600;
+  color:var(--text-2);
+  letter-spacing:0.08em;
+  margin-top:4px;
+  text-transform:uppercase;
+}
+
+/* ============ SECTION TITLE ============ */
+.section-head{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin:70px 0 32px;
+  animation:fadeUp 1s var(--ease) both;
+}
+.section-line{
+  flex:1;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--border-2),transparent);
+}
+.section-title{
+  font-size:1.05rem;
+  font-weight:700;
+  color:var(--text-1);
+  letter-spacing:0.06em;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  white-space:nowrap;
+}
+.section-title svg{width:18px;height:18px;color:var(--gold)}
+
+/* ============ CARDS GRID ============ */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+  padding-bottom:60px;
+}
+.card{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  padding:32px 26px 26px;
+  border-radius:var(--radius);
+  background:linear-gradient(145deg,rgba(255,255,255,0.05),rgba(255,255,255,0.015));
+  border:1px solid var(--border);
+  backdrop-filter:blur(20px) saturate(160%);
+  -webkit-backdrop-filter:blur(20px) saturate(160%);
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  transition:transform .5s var(--ease),border-color .5s var(--ease),box-shadow .5s var(--ease);
+  cursor:pointer;
+  min-height:320px;
+  will-change:transform;
+  transform-style:preserve-3d;
+  animation:fadeUp 1s var(--ease) both;
+}
+.card:nth-child(1){animation-delay:.5s}
+.card:nth-child(2){animation-delay:.6s}
+.card:nth-child(3){animation-delay:.7s}
+.card:nth-child(4){animation-delay:.8s}
+
+.card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(400px circle at var(--mx,50%) var(--my,50%),rgba(212,175,55,0.14),transparent 45%);
+  opacity:0;
+  transition:opacity .4s var(--ease);
+  pointer-events:none;
+  z-index:1;
+}
+.card:hover::before{opacity:1}
+
+.card::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:var(--radius);
+  padding:1px;
+  background:linear-gradient(145deg,rgba(212,175,55,0.5),rgba(59,130,246,0.4),transparent 60%);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  opacity:0;
+  transition:opacity .4s var(--ease);
+  pointer-events:none;
+}
+.card:hover::after{opacity:1}
+
+.card:hover{
+  transform:translateY(-8px);
+  border-color:transparent;
+  box-shadow:0 32px 80px -20px rgba(0,0,0,0.6),0 0 60px -20px rgba(212,175,55,0.25);
+}
+.card:active{transform:translateY(-4px) scale(0.985)}
+.card:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+
+.card-inner{position:relative;z-index:2;display:flex;flex-direction:column;height:100%;transform:translateZ(20px)}
+
+.card-icon{
+  width:64px;height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:18px;
+  background:linear-gradient(135deg,rgba(212,175,55,0.12),rgba(59,130,246,0.08));
+  border:1px solid var(--border-2);
+  margin-bottom:22px;
+  transition:all .5s var(--ease);
+  position:relative;
+  overflow:hidden;
+}
+.card-icon::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,transparent,rgba(255,255,255,0.15),transparent);
+  transform:translateX(-100%);
+  transition:transform .8s var(--ease);
+}
+.card:hover .card-icon::before{transform:translateX(100%)}
+.card:hover .card-icon{
+  transform:scale(1.08) rotate(-4deg);
+  border-color:rgba(212,175,55,0.5);
+  box-shadow:0 0 30px -5px rgba(212,175,55,0.4);
+}
+.card-icon svg{width:32px;height:32px;stroke:var(--gold-2);transition:all .5s var(--ease)}
+.card:hover .card-icon svg{stroke:var(--gold);transform:scale(1.05)}
+
+.card-tag{
+  font-size:0.68rem;
+  font-weight:700;
+  color:var(--gold);
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  margin-bottom:8px;
+  opacity:0.85;
+}
+.card-title{
+  font-size:1.35rem;
+  font-weight:800;
+  color:var(--text-0);
+  margin-bottom:10px;
+  letter-spacing:-0.01em;
+  line-height:1.3;
+}
+.card-desc{
+  font-size:0.88rem;
+  color:var(--text-1);
+  line-height:1.7;
+  flex:1;
+  margin-bottom:22px;
+}
+.card-cta{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-size:0.88rem;
+  font-weight:700;
+  color:var(--gold-2);
+  align-self:flex-start;
+  padding:10px 0;
+  transition:all .4s var(--ease);
+}
+.card-cta .arrow{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:28px;height:28px;
+  border-radius:50%;
+  background:rgba(212,175,55,0.12);
+  border:1px solid rgba(212,175,55,0.3);
+  transition:all .4s var(--ease);
+}
+.card-cta .arrow svg{width:14px;height:14px;stroke:var(--gold-2);transition:all .4s var(--ease)}
+.card:hover .card-cta{color:var(--gold)}
+.card:hover .card-cta .arrow{
+  background:var(--gold);
+  border-color:var(--gold);
+  transform:translateX(-4px);
+  box-shadow:0 0 20px rgba(212,175,55,0.6);
+}
+.card:hover .card-cta .arrow svg{stroke:#05070D}
+
+.ripple{
+  position:absolute;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(212,175,55,0.4),transparent 70%);
+  transform:scale(0);
+  animation:rippleAnim .8s var(--ease);
+  pointer-events:none;
+  z-index:3;
+}
+@keyframes rippleAnim{to{transform:scale(4);opacity:0}}
+
+/* ============ MARQUEE ============ */
+.marquee{
+  margin:20px 0 70px;
+  padding:18px 0;
+  background:linear-gradient(90deg,transparent,rgba(212,175,55,0.06),transparent);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  overflow:hidden;
+  position:relative;
+}
+.marquee::before,.marquee::after{
+  content:'';
+  position:absolute;
+  top:0;bottom:0;
+  width:120px;
+  z-index:2;
+  pointer-events:none;
+}
+.marquee::before{right:0;background:linear-gradient(-90deg,var(--bg-0),transparent)}
+.marquee::after{left:0;background:linear-gradient(90deg,var(--bg-0),transparent)}
+.marquee-track{
+  display:flex;
+  gap:60px;
+  animation:marqueeScroll 40s linear infinite;
+  white-space:nowrap;
+  width:max-content;
+}
+@keyframes marqueeScroll{from{transform:translateX(0)}to{transform:translateX(50%)}}
+.marquee-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:0.82rem;
+  font-weight:600;
+  color:var(--text-1);
+  letter-spacing:0.04em;
+}
+.marquee-item svg{width:16px;height:16px;stroke:var(--gold);flex-shrink:0}
+
+/* ============ FOOTER ============ */
+.footer{
+  margin-top:auto;
+  padding:50px 0 40px;
+  border-top:1px solid var(--border);
+  position:relative;
+  background:linear-gradient(180deg,transparent,rgba(212,175,55,0.03));
+}
+.footer-line{
+  position:absolute;
+  top:0;
+  right:0;
+  height:1px;
+  width:100%;
+  background:linear-gradient(90deg,transparent,var(--gold),var(--blue),transparent);
+  background-size:200% 100%;
+  animation:lineMove 6s linear infinite;
+  opacity:0.6;
+}
+@keyframes lineMove{0%{background-position:0% 0}100%{background-position:200% 0}}
+.footer-inner{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+  text-align:center;
+}
+.footer-logo{
+  width:48px;height:48px;
+  margin-bottom:10px;
+  opacity:0.9;
+}
+.footer-name{
+  font-size:1.05rem;
+  font-weight:800;
+  background:linear-gradient(90deg,#fff,var(--gold-2));
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.footer-sub{
+  font-size:0.82rem;
+  color:var(--text-2);
+  font-weight:500;
+}
+.footer-copy{
+  font-size:0.72rem;
+  color:var(--text-2);
+  margin-top:14px;
+  letter-spacing:0.08em;
+  opacity:0.65;
+}
+.footer-copy span{color:var(--gold);font-weight:700}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:1100px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .container{padding:0 20px}
+  .header{padding:14px 0}
+  .brand-name{font-size:0.9rem}
+  .brand-sub{font-size:0.6rem;letter-spacing:0.16em}
+  .brand-logo{width:42px;height:42px}
+  .clock{padding:6px 12px;font-size:0.72rem}
+  .clock-date{display:none}
+  .hero{padding:50px 0 40px}
+  .hero-logo{width:88px;height:88px}
+  .stats{grid-template-columns:repeat(2,1fr);gap:12px;margin-top:36px}
+  .stat{padding:16px 10px}
+  .stat-num{font-size:1.3rem}
+  .section-head{margin:50px 0 24px}
+  .cards{grid-template-columns:1fr;gap:16px;padding-bottom:40px}
+  .card{min-height:auto;padding:26px 22px 22px}
+  .card-icon{width:56px;height:56px;margin-bottom:18px}
+  .card-icon svg{width:28px;height:28px}
+  .card-title{font-size:1.15rem}
+  .card-desc{font-size:0.84rem}
+  .marquee{margin:20px 0 50px}
+}
+@media(max-width:420px){
+  .container{padding:0 16px}
+  .brand-text{display:none}
+  .hero-title{font-size:1.65rem}
+  .hero-badge{font-size:0.7rem;padding:6px 16px}
+  .section-title{font-size:0.9rem}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+
+/* Light mode override */
+body.light{
+  --bg-0:#F7F9FC;
+  --bg-1:#FFFFFF;
+  --bg-2:#EEF2F8;
+  --text-0:#0A1426;
+  --text-1:#3A4658;
+  --text-2:#6B7A90;
+  --gold:#B8860B;
+  --gold-2:#8B6508;
+  --blue:#1E4A7A;
+  --blue-2:#2563EB;
+  --glass:rgba(255,255,255,0.7);
+  --glass-2:rgba(255,255,255,0.9);
+  --border:rgba(10,20,38,0.08);
+  --border-2:rgba(10,20,38,0.14);
+}
+body.light .aurora::before{background:radial-gradient(circle,#93C5FD 0%,transparent 70%);opacity:0.35}
+body.light .aurora::after{background:radial-gradient(circle,#C4B5FD 0%,transparent 70%);opacity:0.35}
+body.light .aurora-3{opacity:0.3}
+body.light .grid-overlay{
+  background-image:
+    linear-gradient(rgba(10,20,38,0.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(10,20,38,0.04) 1px,transparent 1px);
+}
+body.light .cursor-glow{background:radial-gradient(circle,rgba(30,74,122,0.08) 0%,transparent 60%)}
+body.light .header{background:rgba(247,249,252,0.75)}
+body.light .hero-title{background:linear-gradient(135deg,#0A1426 0%,#B8860B 40%,#1E4A7A 70%,#0A1426 100%);background-size:200% 200%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+body.light .brand-name{background:linear-gradient(90deg,#0A1426,#B8860B);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+body.light .stat-num{background:linear-gradient(135deg,#0A1426,#B8860B);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+body.light .footer-name{background:linear-gradient(90deg,#0A1426,#B8860B);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+body.light .marquee::before{background:linear-gradient(-90deg,var(--bg-0),transparent)}
+body.light .marquee::after{background:linear-gradient(90deg,var(--bg-0),transparent)}
+</style>
+</head>
+<body>
+
+<!-- AURORA BACKGROUND -->
+<div class="aurora"></div>
+<div class="aurora-3"></div>
+<div class="grid-overlay"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+  <div class="container header-inner">
+    <div class="brand">
+      <svg class="brand-logo" viewBox="0 0 100 100" fill="none" aria-label="شعار المصنع">
+        <defs>
+          <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#D4AF37"/>
+            <stop offset="1" stop-color="#3B82F6"/>
+          </linearGradient>
+        </defs>
+        <rect x="4" y="4" width="92" height="92" rx="24" fill="rgba(255,255,255,0.03)" stroke="url(#lg1)" stroke-width="1.5"/>
+        <text x="50" y="50" dy="0.36em" font-family="Cairo,Arial,sans-serif" font-size="52" font-weight="900" fill="url(#lg1)" text-anchor="middle">ص</text>
+      </svg>
+      <div class="brand-text">
+        <span class="brand-name">مصنع الصندل للأوعية البلاستيكية</span>
+        <span class="brand-sub">البوابة الرقمية 2026</span>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <div class="clock">
+        <span class="clock-dot"></span>
+        <span class="clock-date" id="clockDate"></span>
+        <span class="clock-time" id="clockTime">--:--:--</span>
+      </div>
+      <button class="clock" id="themeToggle" style="cursor:pointer;font-family:inherit" aria-label="تبديل الوضع">
+        <span id="themeIcon">🌙</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero container">
+  <div class="hero-badge">
+    <span></span>
+    الإصدار الرسمي — 2026
+  </div>
+
+  <div class="hero-logo-wrap">
+    <svg class="hero-logo" viewBox="0 0 100 100" fill="none" aria-label="شعار المصنع">
+      <defs>
+        <linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#D4AF37"/>
+          <stop offset="1" stop-color="#3B82F6"/>
+        </linearGradient>
+      </defs>
+      <rect x="4" y="4" width="92" height="92" rx="24" fill="rgba(255,255,255,0.03)" stroke="url(#hg1)" stroke-width="1.5"/>
+      <text x="50" y="50" dy="0.36em" font-family="Cairo,Arial,sans-serif" font-size="52" font-weight="900" fill="url(#hg1)" text-anchor="middle">ص</text>
+    </svg>
+  </div>
+
+  <h1 class="hero-title">مصنع الصندل للأوعية البلاستيكية</h1>
+  <p class="hero-sub">البوابة الرقمية للأنظمة الداخلية</p>
+  <p class="hero-desc">الوصول السريع والآمن إلى أنظمة وقطاعات المصنع — بتجربة رقمية بمستوى عالمي</p>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num" data-count="4">0</div>
+      <div class="stat-label">أنظمة متكاملة</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-count="100" data-suffix="%">0</div>
+      <div class="stat-label">جاهزية التشغيل</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-count="24" data-suffix="/7">0</div>
+      <div class="stat-label">متاح دائمًا</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-count="2026">0</div>
+      <div class="stat-label">الإصدار</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION TITLE ============ -->
+<div class="container">
+  <div class="section-head">
+    <div class="section-line"></div>
+    <h2 class="section-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+        <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+        <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+        <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+      </svg>
+      أنظمة المصنع الرقمية
+    </h2>
+    <div class="section-line"></div>
+  </div>
+</div>
+
+<!-- ============ CARDS ============ -->
+<section class="container">
+  <div class="cards">
+
+    <!-- CARD 1 -->
+    <a class="card" href="https://msnalsndlqsmalhbl.github.io/almrotbat/login.html" target="_blank" rel="noopener noreferrer" aria-label="دخول نظام المرتبات">
+      <div class="card-inner">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="6" width="20" height="14" rx="3"/>
+            <path d="M2 10h20"/>
+            <circle cx="17" cy="15" r="1.5"/>
+            <path d="M6 15h5"/>
+          </svg>
+        </div>
+        <span class="card-tag">SYSTEM 01</span>
+        <h3 class="card-title">نظام المرتبات</h3>
+        <p class="card-desc">إدارة المرتبات والموظفين والعمليات المالية المتعلقة بالرواتب بكفاءة ودقة.</p>
+        <span class="card-cta">
+          دخول النظام
+          <span class="arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/>
+            </svg>
+          </span>
+        </span>
+      </div>
+    </a>
+
+    <!-- CARD 2 -->
+    <a class="card" href="https://msnalsndlqsmalhbl.github.io/kham/#dashboard" target="_blank" rel="noopener noreferrer" aria-label="دخول نظام المواد الخام">
+      <div class="card-inner">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+            <line x1="12" y1="22.08" x2="12" y2="12"/>
+          </svg>
+        </div>
+        <span class="card-tag">SYSTEM 02</span>
+        <h3 class="card-title">قسم المواد الخام</h3>
+        <p class="card-desc">إدارة ومتابعة المواد الخام والمخزون وحركة المواد داخل المصنع.</p>
+        <span class="card-cta">
+          دخول النظام
+          <span class="arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/>
+            </svg>
+          </span>
+        </span>
+      </div>
+    </a>
+
+    <!-- CARD 3 -->
+    <a class="card" href="https://msnalsndlqsmalhbl.github.io/akyas/" target="_blank" rel="noopener noreferrer" aria-label="دخول نظام الأكياس">
+      <div class="card-inner">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+        </div>
+        <span class="card-tag">SYSTEM 03</span>
+        <h3 class="card-title">قسم الأكياس</h3>
+        <p class="card-desc">إدارة ومتابعة عمليات قسم الأكياس والإنتاج والبيانات التشغيلية.</p>
+        <span class="card-cta">
+          دخول النظام
+          <span class="arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/>
+            </svg>
+          </span>
+        </span>
+      </div>
+    </a>
+
+    <!-- CARD 4 -->
+    <a class="card" href="https://msnalsndlqsmalhbl.github.io/a/#permissions" target="_blank" rel="noopener noreferrer" aria-label="دخول نظام الحبل">
+      <div class="card-inner">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 2v4"/><path d="M12 18v4"/>
+            <path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/>
+            <path d="M2 12h4"/><path d="M18 12h4"/>
+            <path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/>
+          </svg>
+        </div>
+        <span class="card-tag">SYSTEM 04</span>
+        <h3 class="card-title">قسم الحبل</h3>
+        <p class="card-desc">إدارة ومتابعة عمليات قسم الحبل والإنتاج والبيانات التشغيلية.</p>
+        <span class="card-cta">
+          دخول النظام
+          <span class="arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/>
+            </svg>
+          </span>
+        </span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <div class="marquee-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      نظام المرتبات — جاهز للتشغيل
+    </div>
+    <div class="marquee-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      قسم المواد الخام — متاح الآن
+    </div>
+    <div class="marquee-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      قسم الأكياس — تحديثات مباشرة
+    </div>
+    <div class="marquee-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      قسم الحبل — يعمل بكفاءة
+    </div>
+    <div class="marquee-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      بوابة مصنع الصندل — الإصدار 2026
+    </div>
+    <!-- duplicate for seamless loop -->
+    <div class="marquee-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      نظام المرتبات — جاهز للتشغيل
+    </div>
+    <div class="marquee-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      قسم المواد الخام — متاح الآن
+    </div>
+    <div class="marquee-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      قسم الأكياس — تحديثات مباشرة
+    </div>
+    <div class="marquee-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      قسم الحبل — يعمل بكفاءة
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-line"></div>
+  <div class="container footer-inner">
+    <svg class="footer-logo" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="fg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#D4AF37"/>
+          <stop offset="1" stop-color="#3B82F6"/>
+        </linearGradient>
+      </defs>
+      <rect x="4" y="4" width="92" height="92" rx="24" fill="rgba(255,255,255,0.03)" stroke="url(#fg)" stroke-width="1.5"/>
+      <text x="50" y="50" dy="0.36em" font-family="Cairo,Arial,sans-serif" font-size="52" font-weight="900" fill="url(#fg)" text-anchor="middle">ص</text>
+    </svg>
+    <span class="footer-name">مصنع الصندل للأوعية البلاستيكية</span>
+    <span class="footer-sub">البوابة الرقمية للأنظمة الداخلية</span>
+    <span class="footer-copy">© 2026 جميع الحقوق محفوظة — <span>الإصدار الرسمي</span></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ========== THEME TOGGLE ========== */
+  const themeToggle=document.getElementById('themeToggle');
+  const themeIcon=document.getElementById('themeIcon');
+  const saved=localStorage.getItem('sandal-theme');
+  if(saved==='light'){document.body.classList.add('light');themeIcon.textContent='☀️'}
+  themeToggle.addEventListener('click',()=>{
+    const isLight=document.body.classList.toggle('light');
+    themeIcon.textContent=isLight?'☀️':'🌙';
+    localStorage.setItem('sandal-theme',isLight?'light':'dark');
+  });
+
+  /* ========== LIVE CLOCK ========== */
+  const clockDate=document.getElementById('clockDate');
+  const clockTime=document.getElementById('clockTime');
+  function tick(){
+    const d=new Date();
+    const dateOpts={weekday:'long',day:'numeric',month:'long'};
+    const timeOpts={hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true};
+    clockDate.textContent=d.toLocaleDateString('ar-EG',dateOpts);
+    clockTime.textContent=d.toLocaleTimeString('ar-EG',timeOpts);
+  }
+  tick();setInterval(tick,1000);
+
+  /* ========== CURSOR GLOW ========== */
+  const glow=document.getElementById('cursorGlow');
+  let gx=0,gy=0,tx=0,ty=0;
+  document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});
+  function animateGlow(){
+    gx+=(tx-gx)*0.12;
+    gy+=(ty-gy)*0.12;
+    glow.style.left=gx+'px';
+    glow.style.top=gy+'px';
+    requestAnimationFrame(animateGlow);
+  }
+  animateGlow();
+
+  /* ========== CARD SPOTLIGHT + TILT + RIPPLE ========== */
+  const cards=document.querySelectorAll('.card');
+  cards.forEach(card=>{
+    card.addEventListener('mousemove',e=>{
+      const r=card.getBoundingClientRect();
+      const x=e.clientX-r.left;
+      const y=e.clientY-r.top;
+      card.style.setProperty('--mx',x+'px');
+      card.style.setProperty('--my',y+'px');
+      const cx=r.width/2;
+      const cy=r.height/2;
+      const rx=((y-cy)/cy)*-4;
+      const ry=((x-cx)/cx)*4;
+      card.style.transform=`translateY(-8px) perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+    });
+    card.addEventListener('mouseleave',()=>{
+      card.style.transform='';
+      card.style.setProperty('--mx','50%');
+      card.style.setProperty('--my','50%');
+    });
+    card.addEventListener('click',e=>{
+      const r=card.getBoundingClientRect();
+      const ripple=document.createElement('span');
+      ripple.className='ripple';
+      const size=Math.max(r.width,r.height);
+      ripple.style.width=ripple.style.height=size+'px';
+      ripple.style.left=(e.clientX-r.left-size/2)+'px';
+      ripple.style.top=(e.clientY-r.top-size/2)+'px';
+      card.appendChild(ripple);
+      setTimeout(()=>ripple.remove(),800);
+    });
+  });
+
+  /* ========== COUNT-UP STATS ========== */
+  const statNums=document.querySelectorAll('.stat-num');
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const el=entry.target;
+        const target=parseInt(el.dataset.count,10);
+        const suffix=el.dataset.suffix||'';
+        const dur=1600;
+        const start=performance.now();
+        function step(now){
+          const p=Math.min((now-start)/dur,1);
+          const eased=1-Math.pow(1-p,3);
+          el.textContent=Math.round(eased*target)+suffix;
+          if(p<1)requestAnimationFrame(step);
+          else el.textContent=target+suffix;
+        }
+        requestAnimationFrame(step);
+        io.unobserve(el);
+      }
+    });
+  },{threshold:0.5});
+  statNums.forEach(el=>io.observe(el));
+
+  /* ========== KEYBOARD FOCUS VISIBILITY ========== */
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Tab')document.body.classList.add('kb-nav');
+  });
+  document.addEventListener('mousedown',()=>{
+    document.body.classList.remove('kb-nav');
+  });
+
+})();
+</script>
+</body>
+</html>

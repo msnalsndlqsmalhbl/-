@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <title>مصنع الصندل للأوعية البلاستيكية | البوابة الرقمية 2026</title>
-<meta name="description" content="البوابة الرقمية الرسمية لمصنع الصندل للأوعية البلاستيكية — أنظمة المرتبات، المواد الخام، الأكياس، والحبل.">
+<meta name="description" content="البوابة الرقمية الرسمية لمصنع الصندل للأوعية البلاستيكية — فرع القضارف وفرع الدمازين.">
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 /* ==========================================================================
-   DESIGN SYSTEM — 25 Years Experience
-   Version: 2.1
+   DESIGN SYSTEM
+   Version: 3.0 — Multi-Branch
    ========================================================================== */
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -29,7 +29,6 @@
   --gold:#D4AF37;
   --gold-2:#F4D77A;
   --gold-3:#A8842A;
-  --gold-glow:rgba(212,175,55,0.35);
   --blue:#3B82F6;
   --blue-2:#60A5FA;
   --blue-3:#1E40AF;
@@ -41,7 +40,6 @@
 
   --border-1:rgba(255,255,255,0.08);
   --border-2:rgba(255,255,255,0.12);
-  --border-highlight:rgba(255,255,255,0.18);
 
   --shadow-1: 0 1px 2px rgba(0,0,0,0.30), 0 2px 6px rgba(0,0,0,0.20), 0 4px 12px rgba(0,0,0,0.10);
   --shadow-2: 0 2px 4px rgba(0,0,0,0.35), 0 8px 20px rgba(0,0,0,0.30), 0 16px 40px rgba(0,0,0,0.15);
@@ -63,8 +61,6 @@
 
   --ease-out:cubic-bezier(0.22, 1, 0.36, 1);
   --ease-elastic:cubic-bezier(0.34, 1.56, 0.64, 1);
-  --ease-smooth:cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-in-out:cubic-bezier(0.65, 0, 0.35, 1);
 
   --radius-sm:10px;
   --radius-md:14px;
@@ -88,12 +84,10 @@ body{
   font-size:16px;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
-  text-rendering:optimizeLegibility;
   position:relative;
-  font-feature-settings:"ss01","ss02","kern","liga";
 }
 
-/* ============ BACKGROUND LAYERS ============ */
+/* ============ BACKGROUND ============ */
 .aurora{position:fixed;inset:0;z-index:-3;overflow:hidden;pointer-events:none}
 .aurora::before,.aurora::after{
   content:'';position:absolute;border-radius:50%;
@@ -149,7 +143,6 @@ body{
 }
 @media(hover:hover){.cursor-glow{opacity:1}}
 
-/* ============ LAYOUT ============ */
 .container{
   max-width:1360px;margin:0 auto;
   padding:0 var(--space-4);
@@ -164,7 +157,6 @@ body{
   backdrop-filter:blur(24px) saturate(180%);
   -webkit-backdrop-filter:blur(24px) saturate(180%);
   border-bottom:1px solid var(--border-1);
-  transition:background .4s var(--ease-out);
 }
 .header::after{
   content:'';position:absolute;bottom:-1px;left:0;right:0;height:1px;
@@ -210,9 +202,7 @@ body{
   backdrop-filter:blur(14px);
   white-space:nowrap;
   box-shadow:inset 0 1px 0 rgba(255,255,255,0.04);
-  transition:border-color .35s var(--ease-out),background .35s var(--ease-out);
 }
-.clock:hover{border-color:var(--border-2);background:var(--surface-2)}
 .clock-dot{
   width:7px;height:7px;border-radius:50%;
   background:#22C55E;
@@ -222,10 +212,10 @@ body{
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.30}}
 .clock-time{
   font-variant-numeric:tabular-nums;
-  font-feature-settings:"tnum";
   color:var(--gold-2);font-weight:700;
 }
-.theme-btn{
+
+.theme-btn, .terms-view-btn{
   display:flex;align-items:center;justify-content:center;
   width:42px;height:42px;border-radius:50%;
   background:var(--surface-1);border:1px solid var(--border-1);
@@ -236,32 +226,19 @@ body{
 .theme-btn:hover{
   transform:scale(1.08) rotate(8deg);
   background:var(--surface-2);border-color:var(--border-2);
-  box-shadow:0 0 20px rgba(212,175,55,0.20),inset 0 1px 0 rgba(255,255,255,0.08);
-}
-.theme-btn:active{transform:scale(0.98)}
-.theme-btn:focus-visible{outline:none;box-shadow:0 0 0 2px var(--bg-0),0 0 0 4px var(--gold)}
-
-.terms-view-btn{
-  display:flex;align-items:center;justify-content:center;
-  width:42px;height:42px;border-radius:50%;
-  background:var(--surface-1);border:1px solid var(--border-1);
-  color:var(--text-0);cursor:pointer;font-family:inherit;
-  transition:all .35s var(--ease-elastic);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,0.05);
+  box-shadow:0 0 20px rgba(212,175,55,0.20);
 }
 .terms-view-btn svg{width:18px;height:18px;stroke:var(--gold-2);transition:stroke .35s var(--ease-out)}
 .terms-view-btn:hover{
   transform:scale(1.08) rotate(-3deg);
   background:var(--surface-2);
   border-color:rgba(212,175,55,0.35);
-  box-shadow:0 0 24px rgba(212,175,55,0.20),inset 0 1px 0 rgba(255,255,255,0.08);
+  box-shadow:0 0 24px rgba(212,175,55,0.20);
 }
 .terms-view-btn:hover svg{stroke:var(--gold)}
-.terms-view-btn:active{transform:scale(0.98)}
-.terms-view-btn:focus-visible{outline:none;box-shadow:0 0 0 2px var(--bg-0),0 0 0 4px var(--gold)}
 
 /* ============ HERO ============ */
-.hero{padding:var(--space-10) 0 var(--space-8);text-align:center;position:relative}
+.hero{padding:var(--space-10) 0 var(--space-6);text-align:center;position:relative}
 
 .hero-badge{
   display:inline-flex;align-items:center;gap:10px;
@@ -271,7 +248,6 @@ body{
   font-size:var(--fs-sm);font-weight:600;
   color:var(--gold-2);letter-spacing:0.04em;
   margin-bottom:var(--space-4);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,0.06),0 4px 20px -8px rgba(212,175,55,0.30);
   animation:fadeUp .9s var(--ease-out) both;
 }
 .hero-badge span{
@@ -286,7 +262,7 @@ body{
   animation:fadeUp 1s var(--ease-out) .1s both;
 }
 .hero-logo{
-  width:160px;height:160px;object-fit:contain;display:block;
+  width:150px;height:150px;object-fit:contain;display:block;
   filter:drop-shadow(0 24px 64px rgba(212,175,55,0.35))
          drop-shadow(0 0 40px rgba(212,175,55,0.20));
   animation:floatLogo 7s ease-in-out infinite;
@@ -309,13 +285,13 @@ body{
 .hero-sub{
   font-size:clamp(1.05rem,2vw,1.5rem);
   font-weight:600;color:var(--text-1);
-  margin-bottom:var(--space-2);letter-spacing:-0.01em;
+  margin-bottom:var(--space-2);
   animation:fadeUp 1s var(--ease-out) .3s both;
 }
 .hero-desc{
   font-size:clamp(0.88rem,1.4vw,1.05rem);
   color:var(--text-2);max-width:680px;
-  margin:0 auto;font-weight:400;line-height:1.75;
+  margin:0 auto;line-height:1.75;
   animation:fadeUp 1s var(--ease-out) .4s both;
 }
 @keyframes fadeUp{
@@ -323,72 +299,112 @@ body{
   to{opacity:1;transform:translateY(0)}
 }
 
-.stats{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  gap:var(--space-2);
-  margin:var(--space-6) auto 0;
-  max-width:920px;
-  animation:fadeUp 1.1s var(--ease-out) .5s both;
-}
-.stat{
-  background:var(--surface-1);
-  border:1px solid var(--border-1);
-  border-radius:var(--radius-lg);
-  padding:var(--space-3) var(--space-2);
-  text-align:center;
-  backdrop-filter:blur(14px);
-  position:relative;overflow:hidden;
-  transition:all .5s var(--ease-out);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,0.04);
-}
-.stat::before{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(circle at 50% 0%,rgba(212,175,55,0.08),transparent 60%);
-  opacity:0;transition:opacity .5s var(--ease-out);pointer-events:none;
-}
-.stat:hover{
-  border-color:rgba(212,175,55,0.30);
-  background:var(--surface-2);
-  transform:translateY(-4px);
-  box-shadow:var(--shadow-1),inset 0 1px 0 rgba(255,255,255,0.06);
-}
-.stat:hover::before{opacity:1}
-.stat-num{
-  font-size:var(--fs-2xl);font-weight:800;
-  background:linear-gradient(135deg,#fff,var(--gold-2));
-  -webkit-background-clip:text;background-clip:text;
-  -webkit-text-fill-color:transparent;
-  font-variant-numeric:tabular-nums;
-  font-feature-settings:"tnum";line-height:1.15;
-  letter-spacing:-0.02em;
-}
-.stat-label{
-  font-size:var(--fs-xs);font-weight:600;
-  color:var(--text-2);letter-spacing:0.10em;
-  margin-top:6px;text-transform:uppercase;
-}
-
-.section-head{
-  display:flex;align-items:center;gap:var(--space-2);
-  margin:var(--space-8) 0 var(--space-4);
+/* ============ BRANCH SECTION ============ */
+.branch-section{
+  margin-bottom:var(--space-10);
   animation:fadeUp 1s var(--ease-out) both;
 }
-.section-line{
-  flex:1;height:1px;
-  background:linear-gradient(90deg,transparent,var(--border-2),transparent);
-}
-.section-title{
-  font-size:var(--fs-md);font-weight:700;
-  color:var(--text-1);letter-spacing:0.08em;
-  display:flex;align-items:center;gap:12px;
-  white-space:nowrap;
-}
-.section-title svg{width:18px;height:18px;color:var(--gold);stroke-width:2}
+.branch-section:nth-of-type(1){animation-delay:.5s}
+.branch-section:nth-of-type(2){animation-delay:.7s}
 
-.cards{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  gap:var(--space-3);padding-bottom:var(--space-8);
+.branch-header{
+  display:flex;
+  align-items:center;
+  gap:var(--space-3);
+  margin-bottom:var(--space-4);
+  padding:var(--space-3) var(--space-4);
+  border-radius:var(--radius-xl);
+  background:linear-gradient(135deg,rgba(212,175,55,0.06),rgba(59,130,246,0.04));
+  border:1px solid rgba(212,175,55,0.15);
+  position:relative;
+  overflow:hidden;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.05);
 }
+.branch-header::before{
+  content:'';
+  position:absolute;
+  top:0;right:15%;left:15%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(212,175,55,0.5),transparent);
+}
+.branch-icon{
+  width:56px;height:56px;
+  flex-shrink:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:16px;
+  background:linear-gradient(145deg,rgba(212,175,55,0.18),rgba(59,130,246,0.10));
+  border:1px solid rgba(212,175,55,0.35);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.10),
+    0 8px 24px -12px rgba(212,175,55,0.40);
+}
+.branch-icon svg{
+  width:28px;height:28px;
+  stroke:var(--gold-2);
+}
+.branch-title-wrap{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.branch-title{
+  font-size:clamp(1.3rem,2.5vw,1.75rem);
+  font-weight:900;
+  color:var(--text-0);
+  letter-spacing:-0.02em;
+  line-height:1.2;
+  background:linear-gradient(90deg,#fff,var(--gold-2));
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+body.light .branch-title{
+  background:linear-gradient(90deg,#0A1426,#B8860B);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.branch-meta{
+  font-size:var(--fs-sm);
+  color:var(--text-2);
+  font-weight:600;
+  letter-spacing:0.04em;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.branch-count{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:4px 12px;
+  border-radius:var(--radius-full);
+  background:rgba(212,175,55,0.10);
+  border:1px solid rgba(212,175,55,0.25);
+  color:var(--gold-2);
+  font-weight:700;
+  font-size:var(--fs-xs);
+  letter-spacing:0.08em;
+}
+.branch-count::before{
+  content:'';
+  width:6px;height:6px;border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 8px var(--gold);
+  animation:blink 2s ease-in-out infinite;
+}
+
+/* ============ CARDS GRID ============ */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:var(--space-3);
+}
+.branch-damazin .cards{
+  grid-template-columns:repeat(3,1fr);
+}
+
 .card{
   position:relative;display:flex;flex-direction:column;
   padding:var(--space-4) var(--space-3) var(--space-3);
@@ -398,19 +414,14 @@ body{
   backdrop-filter:blur(24px) saturate(160%);
   -webkit-backdrop-filter:blur(24px) saturate(160%);
   overflow:hidden;text-decoration:none;color:inherit;
-  cursor:pointer;min-height:340px;
+  cursor:pointer;min-height:320px;
   will-change:transform;
   transform-style:preserve-3d;
   transition:transform .55s var(--ease-out),
              border-color .55s var(--ease-out),
              box-shadow .55s var(--ease-out);
   box-shadow:inset 0 1px 0 rgba(255,255,255,0.06),var(--shadow-1);
-  animation:fadeUp 1s var(--ease-out) both;
 }
-.card:nth-child(1){animation-delay:.55s}
-.card:nth-child(2){animation-delay:.65s}
-.card:nth-child(3){animation-delay:.75s}
-.card:nth-child(4){animation-delay:.85s}
 
 .card::before{
   content:'';position:absolute;top:0;right:15%;left:15%;height:1px;
@@ -441,11 +452,10 @@ body{
 .card-inner{
   position:relative;z-index:2;
   display:flex;flex-direction:column;height:100%;
-  transform:translateZ(24px);
 }
 
 .card-icon{
-  width:68px;height:68px;
+  width:64px;height:64px;
   display:flex;align-items:center;justify-content:center;
   border-radius:18px;
   background:linear-gradient(145deg,rgba(212,175,55,0.14) 0%,rgba(59,130,246,0.08) 100%);
@@ -467,7 +477,7 @@ body{
   border-color:rgba(212,175,55,0.45);
   box-shadow:inset 0 1px 0 rgba(255,255,255,0.12),0 0 40px -8px rgba(212,175,55,0.45);
 }
-.card-icon svg{width:32px;height:32px;stroke:var(--gold-2);transition:all .5s var(--ease-out)}
+.card-icon svg{width:30px;height:30px;stroke:var(--gold-2);transition:all .5s var(--ease-out)}
 .card:hover .card-icon svg{stroke:var(--gold);transform:scale(1.04)}
 
 .card-tag{
@@ -520,6 +530,7 @@ body{
 }
 @keyframes rippleAnim{to{transform:scale(4);opacity:0}}
 
+/* ============ MARQUEE ============ */
 .marquee{
   margin:var(--space-3) 0 var(--space-8);
   padding:var(--space-2) 0;
@@ -577,36 +588,28 @@ body{
   background:linear-gradient(90deg,#fff,var(--gold-2));
   -webkit-background-clip:text;background-clip:text;
   -webkit-text-fill-color:transparent;
-  letter-spacing:-0.01em;
 }
 .footer-sub{font-size:var(--fs-sm);color:var(--text-2);font-weight:500}
 
 .footer-meta{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  margin-top:14px;
-  padding:8px 18px;
+  display:inline-flex;align-items:center;gap:10px;
+  margin-top:14px;padding:8px 18px;
   border-radius:var(--radius-full);
   background:linear-gradient(135deg,rgba(212,175,55,0.08),rgba(59,130,246,0.06));
   border:1px solid rgba(212,175,55,0.20);
-  font-size:var(--fs-sm);
-  font-weight:600;
-  color:var(--text-1);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,0.06),0 4px 16px -8px rgba(212,175,55,0.25);
+  font-size:var(--fs-sm);font-weight:600;color:var(--text-1);
   transition:all .4s var(--ease-out);
 }
 .footer-meta:hover{
   border-color:rgba(212,175,55,0.40);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,0.08),0 6px 24px -8px rgba(212,175,55,0.40);
   transform:translateY(-2px);
 }
 .footer-version{display:inline-flex;align-items:center;gap:6px;color:var(--gold-2)}
-.footer-version svg{width:14px;height:14px;stroke:var(--gold);filter:drop-shadow(0 0 6px rgba(212,175,55,0.4))}
-.footer-version strong{font-weight:800;color:var(--gold-2);font-variant-numeric:tabular-nums;font-feature-settings:"tnum";letter-spacing:0.02em}
+.footer-version svg{width:14px;height:14px;stroke:var(--gold)}
+.footer-version strong{font-weight:800;color:var(--gold-2)}
 .footer-sep{color:var(--text-2);opacity:0.5;font-weight:700}
 .footer-build{color:var(--text-2);font-weight:500;font-size:0.75rem}
-.footer-build strong{color:var(--text-1);font-weight:700;font-variant-numeric:tabular-nums;font-feature-settings:"tnum";letter-spacing:0.02em}
+.footer-build strong{color:var(--text-1);font-weight:700}
 
 .footer-copy{
   font-size:var(--fs-xs);color:var(--text-2);
@@ -615,7 +618,7 @@ body{
 }
 .footer-copy span{color:var(--gold);font-weight:700}
 
-/* ============ TERMS MODAL ============ */
+/* ============ TERMS MODAL — بخط كبير وواضح ============ */
 .terms-overlay{
   position:fixed;inset:0;z-index:9999;
   display:flex;align-items:center;justify-content:center;
@@ -630,7 +633,7 @@ body{
 body.terms-locked{overflow:hidden}
 
 .terms-modal{
-  width:100%;max-width:880px;max-height:92vh;
+  width:100%;max-width:1000px;max-height:94vh;
   display:flex;flex-direction:column;
   border-radius:var(--radius-xl);
   background:linear-gradient(145deg,rgba(15,21,34,0.99),rgba(10,15,28,0.99));
@@ -646,13 +649,9 @@ body.terms-locked{overflow:hidden}
   background:linear-gradient(90deg,transparent,rgba(212,175,55,0.6),transparent);
 }
 .terms-overlay.active .terms-modal{transform:translateY(0) scale(1);opacity:1}
-body.light .terms-modal{
-  background:linear-gradient(145deg,#FFFFFF,#F7F9FC);
-  box-shadow:0 40px 120px -20px rgba(10,20,38,0.25),0 0 80px -30px rgba(184,134,11,0.20);
-}
 
 .terms-header{
-  padding:var(--space-4) var(--space-4) var(--space-3);
+  padding:var(--space-4) var(--space-5) var(--space-3);
   border-bottom:1px solid var(--border-1);
   background:linear-gradient(90deg,rgba(212,175,55,0.05),transparent);
   flex-shrink:0;position:relative;
@@ -666,18 +665,18 @@ body.light .terms-modal{
   margin-bottom:var(--space-2);
 }
 .terms-brand-logo{
-  width:56px;height:56px;object-fit:contain;display:block;flex-shrink:0;
+  width:60px;height:60px;object-fit:contain;display:block;flex-shrink:0;
   filter:drop-shadow(0 6px 20px rgba(212,175,55,0.35));
 }
 .terms-brand-text{display:flex;flex-direction:column;line-height:1.25}
-.terms-brand-name{font-size:var(--fs-md);font-weight:800;color:var(--text-0);letter-spacing:-0.01em}
+.terms-brand-name{font-size:1.05rem;font-weight:800;color:var(--text-0)}
 .terms-brand-sub{
-  font-size:var(--fs-xs);font-weight:600;
+  font-size:0.75rem;font-weight:600;
   color:var(--gold);letter-spacing:0.20em;
   text-transform:uppercase;margin-top:2px;
 }
 .terms-title{
-  font-size:var(--fs-2xl);font-weight:800;
+  font-size:clamp(1.4rem,2.5vw,1.8rem);font-weight:800;
   color:var(--text-0);letter-spacing:-0.02em;
   margin-bottom:6px;
   background:linear-gradient(90deg,#fff,var(--gold-2));
@@ -691,116 +690,121 @@ body.light .terms-title{
 }
 .terms-meta{
   display:grid;grid-template-columns:repeat(2,1fr);
-  gap:6px var(--space-3);
-  font-size:var(--fs-sm);color:var(--text-2);
+  gap:8px var(--space-3);
+  font-size:0.92rem;color:var(--text-2);
   margin-top:var(--space-2);
 }
 .terms-meta strong{color:var(--text-1);font-weight:700}
 
+/* ---------- TERMS BODY — بخط كبير وواضح ---------- */
 .terms-body{
   flex:1;overflow-y:auto;
-  padding:var(--space-3) var(--space-4);
+  padding:var(--space-4) var(--space-5);
   scrollbar-width:thin;
   scrollbar-color:var(--gold) transparent;
+  /* خط أوضح للقراءة */
+  font-size:1.05rem;
+  line-height:2.0;
 }
-.terms-body::-webkit-scrollbar{width:8px}
+.terms-body::-webkit-scrollbar{width:10px}
 .terms-body::-webkit-scrollbar-track{background:transparent}
 .terms-body::-webkit-scrollbar-thumb{
   background:linear-gradient(180deg,var(--gold),var(--blue));
   border-radius:100px;
 }
 .terms-body h3{
-  font-size:var(--fs-md);font-weight:800;
-  color:var(--gold-2);margin:var(--space-3) 0 10px;
-  padding-right:14px;border-right:3px solid var(--gold);
-  line-height:1.4;
+  font-size:1.15rem;
+  font-weight:800;
+  color:var(--gold-2);
+  margin:var(--space-5) 0 14px;
+  padding-right:18px;
+  border-right:3px solid var(--gold);
+  line-height:1.5;
+  letter-spacing:-0.01em;
 }
 .terms-body h3:first-child{margin-top:0}
 .terms-body p{
-  font-size:var(--fs-base);color:var(--text-1);
-  line-height:1.85;margin-bottom:10px;
+  font-size:1.05rem;
+  color:var(--text-1);
+  line-height:2.0;
+  margin-bottom:16px;
+  letter-spacing:0.005em;
 }
 .terms-body ol{
   list-style:none;counter-reset:item;
-  padding:0;margin:0 0 12px;
+  padding:0;margin:0 0 20px;
 }
 .terms-body ol li{
   counter-increment:item;
-  font-size:var(--fs-base);color:var(--text-1);
-  line-height:1.8;padding:10px 46px 10px 0;
-  position:relative;border-bottom:1px solid var(--border-1);
+  font-size:1.05rem;
+  color:var(--text-1);
+  line-height:2.0;
+  padding:16px 60px 16px 0;
+  position:relative;
+  border-bottom:1px solid var(--border-1);
+  letter-spacing:0.005em;
 }
 .terms-body ol li:last-child{border-bottom:none}
 .terms-body ol li::before{
   content:counter(item);
-  position:absolute;right:0;top:10px;
-  width:30px;height:30px;
+  position:absolute;right:0;top:18px;
+  width:38px;height:38px;
   display:flex;align-items:center;justify-content:center;
   border-radius:50%;
   background:linear-gradient(135deg,rgba(212,175,55,0.18),rgba(59,130,246,0.10));
   border:1px solid rgba(212,175,55,0.32);
-  color:var(--gold-2);font-size:0.72rem;font-weight:800;
-  font-variant-numeric:tabular-nums;
+  color:var(--gold-2);
+  font-size:0.88rem;
+  font-weight:800;
   box-shadow:inset 0 1px 0 rgba(255,255,255,0.08);
 }
-.terms-body ul{list-style:none;padding:0;margin:8px 0 12px}
+.terms-body ul{list-style:none;padding:0;margin:12px 0 18px}
 .terms-body ul li{
-  font-size:var(--fs-sm);color:var(--text-1);
-  line-height:1.75;padding:5px 24px 5px 0;position:relative;
+  font-size:1rem;
+  color:var(--text-1);
+  line-height:1.9;
+  padding:8px 28px 8px 0;
+  position:relative;
 }
 .terms-body ul li::before{
-  content:'◆';position:absolute;right:0;top:5px;
-  color:var(--gold);font-size:0.6rem;
+  content:'◆';position:absolute;right:0;top:10px;
+  color:var(--gold);font-size:0.7rem;
 }
 
 .terms-footer{
-  padding:var(--space-3) var(--space-4) var(--space-4);
+  padding:var(--space-3) var(--space-5) var(--space-4);
   border-top:1px solid var(--border-1);
   background:linear-gradient(0deg,rgba(212,175,55,0.04),transparent);
   flex-shrink:0;
 }
 
-/* ===== PDF Button ===== */
 .terms-actions{
-  display:flex;
-  gap:var(--space-2);
+  display:flex;gap:var(--space-2);
   margin-bottom:var(--space-2);
 }
 .pdf-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  padding:12px 20px;
-  border-radius:var(--radius-md);
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:14px 24px;border-radius:var(--radius-md);
   background:linear-gradient(135deg,rgba(59,130,246,0.12),rgba(30,64,175,0.08));
   border:1px solid rgba(59,130,246,0.30);
   color:var(--blue-2);
-  font-family:inherit;
-  font-size:var(--fs-base);
-  font-weight:700;
-  cursor:pointer;
-  transition:all .4s var(--ease-elastic);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,0.05);
+  font-family:inherit;font-size:1rem;font-weight:700;
+  cursor:pointer;transition:all .4s var(--ease-elastic);
   width:100%;
 }
-.pdf-btn svg{width:16px;height:16px;stroke:currentColor}
+.pdf-btn svg{width:18px;height:18px;stroke:currentColor}
 .pdf-btn:hover{
   transform:translateY(-2px);
   background:linear-gradient(135deg,rgba(59,130,246,0.20),rgba(30,64,175,0.15));
   border-color:rgba(59,130,246,0.55);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,0.10),0 12px 32px -10px rgba(59,130,246,0.45);
 }
-.pdf-btn:active{transform:translateY(0) scale(0.99)}
-.pdf-btn:focus-visible{outline:none;box-shadow:0 0 0 2px var(--bg-0),0 0 0 4px var(--blue-2)}
 
 .terms-consent{
   display:flex;align-items:flex-start;gap:var(--space-2);
-  padding:var(--space-2);border-radius:var(--radius-md);
+  padding:18px 20px;border-radius:var(--radius-md);
   background:var(--surface-1);border:1px solid var(--border-1);
   cursor:pointer;transition:all .4s var(--ease-out);
   margin-bottom:var(--space-2);user-select:none;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,0.03);
 }
 .terms-consent:hover{
   border-color:rgba(212,175,55,0.4);
@@ -808,31 +812,33 @@ body.light .terms-title{
 }
 .terms-consent input{
   appearance:none;-webkit-appearance:none;
-  width:22px;height:22px;flex-shrink:0;margin-top:2px;
-  border-radius:6px;border:2px solid var(--border-2);
+  width:26px;height:26px;flex-shrink:0;margin-top:2px;
+  border-radius:7px;border:2px solid var(--border-2);
   background:transparent;cursor:pointer;position:relative;
   transition:all .3s var(--ease-out);
 }
 .terms-consent input:checked{
   background:linear-gradient(135deg,var(--gold),var(--blue));
   border-color:var(--gold);
-  box-shadow:0 0 20px rgba(212,175,55,0.5),inset 0 1px 0 rgba(255,255,255,0.3);
+  box-shadow:0 0 20px rgba(212,175,55,0.5);
 }
 .terms-consent input:checked::after{
   content:'✓';position:absolute;inset:0;
   display:flex;align-items:center;justify-content:center;
-  color:#05070D;font-size:0.9rem;font-weight:900;line-height:1;
+  color:#05070D;font-size:1rem;font-weight:900;
 }
-.terms-consent input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-.terms-consent span{font-size:var(--fs-base);font-weight:600;color:var(--text-1);line-height:1.6}
+.terms-consent span{
+  font-size:1.05rem;font-weight:600;
+  color:var(--text-1);line-height:1.7;
+}
 
 .terms-close-btn{
-  position:absolute;top:20px;left:20px;
-  width:36px;height:36px;
+  position:absolute;top:22px;left:22px;
+  width:40px;height:40px;
   display:none;align-items:center;justify-content:center;
   border-radius:50%;
   background:var(--surface-1);border:1px solid var(--border-1);
-  color:var(--text-1);font-size:1rem;font-weight:700;
+  color:var(--text-1);font-size:1.1rem;font-weight:700;
   cursor:pointer;font-family:inherit;
   transition:all .35s var(--ease-out);
   z-index:10;
@@ -843,105 +849,91 @@ body.light .terms-title{
   color:var(--gold-2);
   transform:rotate(90deg) scale(1.05);
 }
-.terms-close-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 
 .terms-accepted-notice{
   display:none;align-items:center;gap:12px;
-  padding:16px 20px;
-  border-radius:var(--radius-md);
+  padding:18px 22px;border-radius:var(--radius-md);
   background:linear-gradient(135deg,rgba(34,197,94,0.10),rgba(212,175,55,0.06));
   border:1px solid rgba(34,197,94,0.25);
   color:var(--text-0);
-  font-size:var(--fs-base);font-weight:600;line-height:1.6;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,0.05);
+  font-size:1rem;font-weight:600;line-height:1.7;
 }
-.terms-accepted-notice svg{stroke:#22C55E;filter:drop-shadow(0 0 8px rgba(34,197,94,0.4))}
-body.light .terms-accepted-notice{
-  background:linear-gradient(135deg,rgba(34,197,94,0.10),rgba(184,134,11,0.06));
-  border-color:rgba(34,197,94,0.35);
-  color:#0A1426;
-}
+.terms-accepted-notice svg{stroke:#22C55E;flex-shrink:0}
 
 .terms-btn{
-  width:100%;padding:16px 24px;
+  width:100%;padding:18px 28px;
   border-radius:var(--radius-md);
-  font-family:inherit;font-size:var(--fs-md);font-weight:800;
+  font-family:inherit;font-size:1.05rem;font-weight:800;
   color:#05070D;letter-spacing:0.02em;
   background:linear-gradient(135deg,var(--gold-2),var(--gold),var(--gold-3));
-  border:none;cursor:pointer;position:relative;overflow:hidden;
+  border:none;cursor:pointer;
   transition:all .4s var(--ease-elastic);
   box-shadow:inset 0 1px 0 rgba(255,255,255,0.35),0 12px 32px -10px rgba(212,175,55,0.55);
 }
 .terms-btn:hover:not(:disabled){
   transform:translateY(-2px);
   box-shadow:inset 0 1px 0 rgba(255,255,255,0.45),0 18px 44px -10px rgba(212,175,55,0.75);
-  filter:brightness(1.06);
 }
-.terms-btn:active:not(:disabled){transform:translateY(0) scale(0.99)}
 .terms-btn:disabled{
   cursor:not-allowed;opacity:0.4;filter:grayscale(0.7);
   box-shadow:none;
   background:linear-gradient(135deg,#5A6478,#3A4658);
   color:#8B95A8;
 }
-.terms-btn:focus-visible{
-  outline:none;
-  box-shadow:0 0 0 3px var(--bg-0),0 0 0 5px var(--blue-2),0 12px 32px -10px rgba(59,130,246,0.5);
-}
 
 /* ============ RESPONSIVE ============ */
-@media(max-width:1100px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1100px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .branch-damazin .cards{grid-template-columns:repeat(2,1fr)}
+}
 @media(max-width:768px){
   .container{padding:0 var(--space-3)}
-  .header{padding:var(--space-2) 0}
   .brand-name{font-size:var(--fs-md)}
   .brand-sub{font-size:0.6rem;letter-spacing:0.18em}
   .brand-logo{width:44px;height:44px}
   .clock{padding:8px 14px;font-size:var(--fs-xs)}
   .clock-date{display:none}
-  .theme-btn{width:38px;height:38px;font-size:1rem}
-  .terms-view-btn{width:38px;height:38px}
-  .terms-view-btn svg{width:16px;height:16px}
+  .theme-btn, .terms-view-btn{width:38px;height:38px}
   .hero{padding:var(--space-6) 0 var(--space-5)}
-  .hero-logo{width:120px;height:120px}
-  .stats{grid-template-columns:repeat(2,1fr);gap:12px;margin-top:var(--space-4)}
-  .stat{padding:var(--space-2) 12px}
-  .stat-num{font-size:var(--fs-xl)}
-  .section-head{margin:var(--space-6) 0 var(--space-3)}
-  .cards{grid-template-columns:1fr;gap:var(--space-2);padding-bottom:var(--space-5)}
-  .card{min-height:auto;padding:var(--space-3) var(--space-3) var(--space-2)}
-  .card-icon{width:58px;height:58px;margin-bottom:var(--space-2)}
+  .hero-logo{width:110px;height:110px}
+  .branch-header{padding:var(--space-3);gap:var(--space-2)}
+  .branch-icon{width:48px;height:48px}
+  .branch-icon svg{width:24px;height:24px}
+  .branch-title{font-size:1.25rem}
+  .branch-meta{font-size:0.75rem}
+  .cards{grid-template-columns:1fr;gap:var(--space-2)}
+  .branch-damazin .cards{grid-template-columns:1fr}
+  .card{min-height:auto;padding:var(--space-3)}
+  .card-icon{width:56px;height:56px;margin-bottom:var(--space-2)}
   .card-icon svg{width:28px;height:28px}
   .card-title{font-size:var(--fs-lg)}
-  .card-desc{font-size:var(--fs-sm)}
   .marquee{margin:var(--space-2) 0 var(--space-6)}
   .footer-logo{width:60px;height:60px}
-  .footer-meta{font-size:0.72rem;padding:6px 14px;gap:8px}
-  .footer-version svg{width:12px;height:12px}
+  /* Terms Modal */
   .terms-overlay{padding:0}
   .terms-modal{max-height:100vh;height:100vh;max-width:100%;border-radius:0}
   .terms-header{padding:var(--space-3) var(--space-3) var(--space-2)}
-  .terms-title{font-size:var(--fs-xl)}
-  .terms-meta{grid-template-columns:1fr;font-size:var(--fs-xs)}
-  .terms-body{padding:var(--space-3)}
-  .terms-body h3{font-size:var(--fs-base);margin:var(--space-2) 0 8px}
-  .terms-body p,.terms-body ol li,.terms-body ul li{font-size:var(--fs-sm);line-height:1.75}
-  .terms-body ol li{padding:8px 42px 8px 0}
+  .terms-title{font-size:1.25rem}
+  .terms-meta{grid-template-columns:1fr;font-size:0.8rem}
+  .terms-body{padding:var(--space-3);font-size:1rem}
+  .terms-body h3{font-size:1.05rem;margin:var(--space-3) 0 10px;padding-right:14px}
+  .terms-body p, .terms-body ol li{font-size:1rem;line-height:1.9}
+  .terms-body ol li{padding:12px 50px 12px 0}
+  .terms-body ol li::before{width:32px;height:32px;font-size:0.78rem;top:14px}
   .terms-footer{padding:var(--space-2) var(--space-3) var(--space-3)}
-  .terms-consent span{font-size:var(--fs-sm)}
-  .terms-btn{padding:14px 20px;font-size:var(--fs-base)}
-  .pdf-btn{padding:11px 18px;font-size:var(--fs-sm)}
-  .terms-brand-logo{width:46px;height:46px}
-  .terms-brand-name{font-size:var(--fs-base)}
-  .terms-close-btn{top:16px;left:16px;width:32px;height:32px;font-size:0.9rem}
-  .terms-accepted-notice{font-size:var(--fs-sm);padding:14px 16px;gap:10px}
+  .terms-consent{padding:14px 16px}
+  .terms-consent input{width:24px;height:24px}
+  .terms-consent span{font-size:0.95rem}
+  .terms-btn{padding:16px 20px;font-size:0.95rem}
+  .pdf-btn{padding:12px 18px;font-size:0.9rem}
+  .terms-brand-logo{width:48px;height:48px}
+  .terms-brand-name{font-size:0.95rem}
 }
 @media(max-width:420px){
   .container{padding:0 var(--space-2)}
   .brand-text{display:none}
-  .hero-title{font-size:1.75rem;letter-spacing:-0.025em}
-  .hero-badge{font-size:var(--fs-xs);padding:7px 18px}
-  .section-title{font-size:var(--fs-sm)}
+  .hero-title{font-size:1.75rem}
+  .branch-title{font-size:1.1rem}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
@@ -950,8 +942,6 @@ body.light .terms-accepted-notice{
 /* ============ LIGHT MODE ============ */
 body.light{
   --bg-0:#F7F9FC;
-  --bg-1:#FFFFFF;
-  --bg-2:#EEF2F8;
   --text-0:#0A1426;
   --text-1:#3A4658;
   --text-2:#6B7A90;
@@ -962,13 +952,11 @@ body.light{
   --blue-2:#2563EB;
   --surface-1:rgba(255,255,255,0.75);
   --surface-2:rgba(255,255,255,0.9);
-  --surface-3:rgba(255,255,255,1);
   --border-1:rgba(10,20,38,0.07);
   --border-2:rgba(10,20,38,0.13);
-  --border-highlight:rgba(255,255,255,0.9);
   --shadow-1: 0 1px 2px rgba(10,20,38,0.06), 0 2px 6px rgba(10,20,38,0.05), 0 4px 12px rgba(10,20,38,0.04);
-  --shadow-2: 0 2px 4px rgba(10,20,38,0.08), 0 8px 20px rgba(10,20,38,0.07), 0 16px 40px rgba(10,20,38,0.05);
-  --shadow-3: 0 4px 8px rgba(10,20,38,0.10), 0 16px 40px rgba(10,20,38,0.08), 0 32px 80px rgba(10,20,38,0.06);
+  --shadow-2: 0 2px 4px rgba(10,20,38,0.08), 0 8px 20px rgba(10,20,38,0.07);
+  --shadow-3: 0 4px 8px rgba(10,20,38,0.10), 0 16px 40px rgba(10,20,38,0.08);
 }
 body.light .aurora::before{background:radial-gradient(circle,#93C5FD 0%,transparent 70%);opacity:0.4}
 body.light .aurora::after{background:radial-gradient(circle,#C4B5FD 0%,transparent 70%);opacity:0.4}
@@ -979,6 +967,7 @@ body.light .grid-overlay{
 }
 body.light .cursor-glow{background:radial-gradient(circle,rgba(30,74,122,0.07) 0%,transparent 60%)}
 body.light .header{background:rgba(247,249,252,0.75)}
+body.light .terms-modal{background:linear-gradient(145deg,#FFFFFF,#F7F9FC)}
 body.light .hero-title{
   background:linear-gradient(135deg,#0A1426 0%,#B8860B 40%,#1E4A7A 70%,#0A1426 100%);
   background-size:200% 200%;
@@ -987,26 +976,19 @@ body.light .hero-title{
 }
 body.light .brand-name{
   background:linear-gradient(90deg,#0A1426,#B8860B);
-  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-}
-body.light .stat-num{
-  background:linear-gradient(135deg,#0A1426,#B8860B);
-  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 body.light .footer-name{
   background:linear-gradient(90deg,#0A1426,#B8860B);
-  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 body.light .marquee::before{background:linear-gradient(-90deg,var(--bg-0),transparent)}
 body.light .marquee::after{background:linear-gradient(90deg,var(--bg-0),transparent)}
 body.light .card{background:linear-gradient(145deg,rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.6) 100%)}
-body.light .card::before{background:linear-gradient(90deg,transparent,rgba(184,134,11,0.2),transparent)}
-body.light .card:hover::before{background:linear-gradient(90deg,transparent,rgba(184,134,11,0.6),transparent)}
-body.light .footer-meta{
-  background:linear-gradient(135deg,rgba(184,134,11,0.08),rgba(30,74,122,0.06));
-  border-color:rgba(184,134,11,0.25);
-}
-body.light .footer-meta:hover{border-color:rgba(184,134,11,0.45)}
+body.light .branch-header{background:linear-gradient(135deg,rgba(184,134,11,0.08),rgba(30,74,122,0.05))}
+body.light .branch-title{background:linear-gradient(90deg,#0A1426,#B8860B);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 </style>
 </head>
 <body>
@@ -1062,50 +1044,34 @@ body.light .footer-meta:hover{border-color:rgba(184,134,11,0.45)}
 
   <h1 class="hero-title">مصنع الصندل للأوعية البلاستيكية</h1>
   <p class="hero-sub">البوابة الرقمية للأنظمة الداخلية</p>
-  <p class="hero-desc">الوصول السريع والآمن إلى أنظمة وقطاعات المصنع — بتجربة رقمية بمستوى عالمي</p>
-
-  <div class="stats">
-    <div class="stat">
-      <div class="stat-num" data-count="4">0</div>
-      <div class="stat-label">أنظمة متكاملة</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num" data-count="100" data-suffix="%">0</div>
-      <div class="stat-label">جاهزية التشغيل</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num" data-count="24" data-suffix="/7">0</div>
-      <div class="stat-label">متاح دائمًا</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num" data-count="2026">0</div>
-      <div class="stat-label">الإصدار</div>
-    </div>
-  </div>
+  <p class="hero-desc">الوصول السريع والآمن إلى أنظمة وقطاعات المصنع — لفرعي القضارف والدمازين</p>
 </section>
 
-<!-- ============ SECTION TITLE ============ -->
-<div class="container">
-  <div class="section-head">
-    <div class="section-line"></div>
-    <h2 class="section-title">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3" y="3" width="7" height="7" rx="1.5"/>
-        <rect x="14" y="3" width="7" height="7" rx="1.5"/>
-        <rect x="3" y="14" width="7" height="7" rx="1.5"/>
-        <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+<!-- ============ BRANCH: القضارف ============ -->
+<section class="container branch-section branch-gadarif">
+  <div class="branch-header">
+    <div class="branch-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 21h18"/>
+        <path d="M5 21V7l8-4v18"/>
+        <path d="M19 21V11l-6-4"/>
+        <path d="M9 9v.01"/>
+        <path d="M9 12v.01"/>
+        <path d="M9 15v.01"/>
+        <path d="M9 18v.01"/>
       </svg>
-      أنظمة المصنع الرقمية
-    </h2>
-    <div class="section-line"></div>
+    </div>
+    <div class="branch-title-wrap">
+      <h2 class="branch-title">فرع القضارف</h2>
+      <div class="branch-meta">
+        <span class="branch-count">4 أنظمة متاحة</span>
+      </div>
+    </div>
   </div>
-</div>
 
-<!-- ============ CARDS ============ -->
-<section class="container">
   <div class="cards">
-
-    <a class="card" href="https://msnalsndlqsmalhbl.github.io/almrotbat/login.html" target="_blank" rel="noopener noreferrer" aria-label="دخول نظام المرتبات">
+    <!-- 1. المرتبات -->
+    <a class="card" href="https://msnalsndlqsmalhbl.github.io/almrotbat/login.html" target="_blank" rel="noopener noreferrer" aria-label="نظام المرتبات - فرع القضارف">
       <div class="card-inner">
         <div class="card-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -1117,7 +1083,7 @@ body.light .footer-meta:hover{border-color:rgba(184,134,11,0.45)}
         </div>
         <span class="card-tag">SYSTEM 01</span>
         <h3 class="card-title">نظام المرتبات</h3>
-        <p class="card-desc">إدارة المرتبات والموظفين والعمليات المالية المتعلقة بالرواتب بكفاءة ودقة.</p>
+        <p class="card-desc">إدارة المرتبات والموظفين والعمليات المالية المتعلقة بالرواتب.</p>
         <span class="card-cta">
           دخول النظام
           <span class="arrow">
@@ -1129,7 +1095,8 @@ body.light .footer-meta:hover{border-color:rgba(184,134,11,0.45)}
       </div>
     </a>
 
-    <a class="card" href="https://msnalsndlqsmalhbl.github.io/kham/#dashboard" target="_blank" rel="noopener noreferrer" aria-label="دخول نظام المواد الخام">
+    <!-- 2. المواد الخام -->
+    <a class="card" href="https://msnalsndlqsmalhbl.github.io/kham/#dashboard" target="_blank" rel="noopener noreferrer" aria-label="قسم المواد الخام - فرع القضارف">
       <div class="card-inner">
         <div class="card-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -1152,7 +1119,8 @@ body.light .footer-meta:hover{border-color:rgba(184,134,11,0.45)}
       </div>
     </a>
 
-    <a class="card" href="https://msnalsndlqsmalhbl.github.io/akyas/" target="_blank" rel="noopener noreferrer" aria-label="دخول نظام الأكياس">
+    <!-- 3. الأكياس -->
+    <a class="card" href="https://msnalsndlqsmalhbl.github.io/akyas/" target="_blank" rel="noopener noreferrer" aria-label="قسم الأكياس - فرع القضارف">
       <div class="card-inner">
         <div class="card-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -1175,7 +1143,8 @@ body.light .footer-meta:hover{border-color:rgba(184,134,11,0.45)}
       </div>
     </a>
 
-    <a class="card" href="https://msnalsndlqsmalhbl.github.io/a/#permissions" target="_blank" rel="noopener noreferrer" aria-label="دخول نظام الحبل">
+    <!-- 4. الحبل -->
+    <a class="card" href="https://msnalsndlqsmalhbl.github.io/a/#permissions" target="_blank" rel="noopener noreferrer" aria-label="قسم الحبل - فرع القضارف">
       <div class="card-inner">
         <div class="card-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -1199,7 +1168,104 @@ body.light .footer-meta:hover{border-color:rgba(184,134,11,0.45)}
         </span>
       </div>
     </a>
+  </div>
+</section>
 
+<!-- ============ BRANCH: الدمازين ============ -->
+<section class="container branch-section branch-damazin">
+  <div class="branch-header">
+    <div class="branch-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 21h18"/>
+        <path d="M5 21V7l8-4v18"/>
+        <path d="M19 21V11l-6-4"/>
+        <path d="M9 9v.01"/>
+        <path d="M9 12v.01"/>
+        <path d="M9 15v.01"/>
+        <path d="M9 18v.01"/>
+      </svg>
+    </div>
+    <div class="branch-title-wrap">
+      <h2 class="branch-title">فرع الدمازين</h2>
+      <div class="branch-meta">
+        <span class="branch-count">3 أنظمة متاحة</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards">
+    <!-- 1. المرتبات -->
+    <a class="card" href="https://msnalsndlqsmalhbl.github.io/almrotbat-aldmazzen/login.html" target="_blank" rel="noopener noreferrer" aria-label="نظام المرتبات - فرع الدمازين">
+      <div class="card-inner">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="6" width="20" height="14" rx="3"/>
+            <path d="M2 10h20"/>
+            <circle cx="17" cy="15" r="1.5"/>
+            <path d="M6 15h5"/>
+          </svg>
+        </div>
+        <span class="card-tag">SYSTEM 01</span>
+        <h3 class="card-title">نظام المرتبات</h3>
+        <p class="card-desc">إدارة المرتبات والموظفين والعمليات المالية المتعلقة بالرواتب.</p>
+        <span class="card-cta">
+          دخول النظام
+          <span class="arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/>
+            </svg>
+          </span>
+        </span>
+      </div>
+    </a>
+
+    <!-- 2. المواد الخام -->
+    <a class="card" href="https://msnalsndlqsmalhbl.github.io/alkhaam-aldmazeen/" target="_blank" rel="noopener noreferrer" aria-label="قسم المواد الخام - فرع الدمازين">
+      <div class="card-inner">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+            <line x1="12" y1="22.08" x2="12" y2="12"/>
+          </svg>
+        </div>
+        <span class="card-tag">SYSTEM 02</span>
+        <h3 class="card-title">قسم المواد الخام</h3>
+        <p class="card-desc">إدارة ومتابعة المواد الخام والمخزون وحركة المواد داخل المصنع.</p>
+        <span class="card-cta">
+          دخول النظام
+          <span class="arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/>
+            </svg>
+          </span>
+        </span>
+      </div>
+    </a>
+
+    <!-- 3. الأكياس -->
+    <a class="card" href="https://msnalsndlqsmalhbl.github.io/akyas-aldmazeen/" target="_blank" rel="noopener noreferrer" aria-label="قسم الأكياس - فرع الدمازين">
+      <div class="card-inner">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+        </div>
+        <span class="card-tag">SYSTEM 03</span>
+        <h3 class="card-title">قسم الأكياس</h3>
+        <p class="card-desc">إدارة ومتابعة عمليات قسم الأكياس والإنتاج والبيانات التشغيلية.</p>
+        <span class="card-cta">
+          دخول النظام
+          <span class="arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/>
+            </svg>
+          </span>
+        </span>
+      </div>
+    </a>
   </div>
 </section>
 
@@ -1208,19 +1274,11 @@ body.light .footer-meta:hover{border-color:rgba(184,134,11,0.45)}
   <div class="marquee-track">
     <div class="marquee-item">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-      نظام المرتبات — جاهز للتشغيل
+      فرع القضارف — 4 أنظمة جاهزة
     </div>
     <div class="marquee-item">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-      قسم المواد الخام — متاح الآن
-    </div>
-    <div class="marquee-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-      قسم الأكياس — تحديثات مباشرة
-    </div>
-    <div class="marquee-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-      قسم الحبل — يعمل بكفاءة
+      فرع الدمازين — 3 أنظمة جاهزة
     </div>
     <div class="marquee-item">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1228,19 +1286,23 @@ body.light .footer-meta:hover{border-color:rgba(184,134,11,0.45)}
     </div>
     <div class="marquee-item">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-      نظام المرتبات — جاهز للتشغيل
+      تحديثات مباشرة — كل الأنظمة تعمل
     </div>
     <div class="marquee-item">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-      قسم المواد الخام — متاح الآن
+      فرع القضارف — 4 أنظمة جاهزة
     </div>
     <div class="marquee-item">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-      قسم الأكياس — تحديثات مباشرة
+      فرع الدمازين — 3 أنظمة جاهزة
     </div>
     <div class="marquee-item">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-      قسم الحبل — يعمل بكفاءة
+      بوابة مصنع الصندل — الإصدار 2026
+    </div>
+    <div class="marquee-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      تحديثات مباشرة — كل الأنظمة تعمل
     </div>
   </div>
 </div>
@@ -1251,7 +1313,7 @@ body.light .footer-meta:hover{border-color:rgba(184,134,11,0.45)}
   <div class="container footer-inner">
     <img class="footer-logo" src="logo.png" alt="شعار مصنع الصندل">
     <span class="footer-name">مصنع الصندل للأوعية البلاستيكية</span>
-    <span class="footer-sub">البوابة الرقمية للأنظمة الداخلية</span>
+    <span class="footer-sub">البوابة الرقمية للأنظمة الداخلية — فرع القضارف وفرع الدمازين</span>
 
     <div class="footer-meta">
       <span class="footer-version">
@@ -1263,9 +1325,7 @@ body.light .footer-meta:hover{border-color:rgba(184,134,11,0.45)}
         <strong>1.0.0</strong>
       </span>
       <span class="footer-sep">•</span>
-      <span class="footer-build">
-        Build <strong>2026.09.15</strong>
-      </span>
+      <span class="footer-build">Build <strong>2026.09.15</strong></span>
     </div>
 
     <span class="footer-copy">© 2026 جميع الحقوق محفوظة — <span>الإصدار الرسمي</span></span>
@@ -1296,12 +1356,12 @@ body.light .footer-meta:hover{border-color:rgba(184,134,11,0.45)}
 
     <div class="terms-body" id="termsBody">
       <h3>أولاً — طبيعة النظام</h3>
-      <p>تم تطوير هذا النظام خصيصًا لإدارة العمليات والبيانات الخاصة بمصنع الصندل، ويتكون من عدة أنظمة وأقسام مستقلة تعمل ضمن واجهة النظام الرئيسية، بما في ذلك إدارة قسم الحبل، الأكياس، المواد الخام، ونظام المرتبات وغيرها من الأقسام المتفق عليها.</p>
+      <p>تم تطوير هذا النظام خصيصًا لإدارة العمليات والبيانات الخاصة بمصنع الصندل، ويتكون من عدة أنظمة وأقسام مستقلة تعمل ضمن واجهة النظام الرئيسية، بما في ذلك إدارة قسم الحبل، الأكياس، المواد الخام، ونظام المرتبات وغيرها من الأقسام المتفق عليها، موزعة على فرعي القضارف والدمازين.</p>
       <p>لكل قسم وظائف ومستخدمون وصلاحيات خاصة به وفقًا لإعدادات النظام.</p>
 
       <h3>ثانيًا — الترخيص والاستخدام</h3>
       <ol>
-        <li>يمنح المطور مالك مصنع الصندل، السيد/ عصام الجبل، حق استخدام النظام داخل مصنع الصندل وللأغراض التشغيلية الخاصة بالمصنع.</li>
+        <li>يمنح المطور مالك مصنع الصندل، السيد/ عصام الجبل، حق استخدام النظام داخل مصنع الصندل وللأغراض التشغيلية الخاصة بالمصنع وفروعه.</li>
         <li>لا يشمل هذا الترخيص حق بيع النظام أو تأجيره أو إعادة توزيعه أو استخدامه لصالح منشأة أخرى.</li>
         <li>لا يجوز نسخ النظام أو إعادة إنتاجه أو إنشاء نسخة مماثلة منه أو إزالة بيانات المطور وحقوقه التعريفية دون موافقة خطية من المطور.</li>
         <li>شراء النظام أو دفع قيمته لا يعني تلقائيًا انتقال ملكية الكود المصدري أو الملكية الفكرية البرمجية إلى العميل، ما لم يوجد اتفاق مكتوب مستقل ينص على ذلك.</li>
@@ -1501,7 +1561,7 @@ body.light .footer-meta:hover{border-color:rgba(184,134,11,0.45)}
       const cy=r.height/2;
       const rx=((y-cy)/cy)*-3.5;
       const ry=((x-cx)/cx)*3.5;
-      card.style.transform=`translateY(-10px) perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+      card.style.transform='translateY(-10px) perspective(1000px) rotateX('+rx+'deg) rotateY('+ry+'deg)';
     });
     card.addEventListener('mouseleave',()=>{
       card.style.transform='';
@@ -1521,31 +1581,7 @@ body.light .footer-meta:hover{border-color:rgba(184,134,11,0.45)}
     });
   });
 
-  /* ========== COUNT-UP STATS ========== */
-  const statNums=document.querySelectorAll('.stat-num');
-  const io=new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        const el=entry.target;
-        const target=parseInt(el.dataset.count,10);
-        const suffix=el.dataset.suffix||'';
-        const dur=1800;
-        const start=performance.now();
-        function step(now){
-          const p=Math.min((now-start)/dur,1);
-          const eased=1-Math.pow(1-p,3);
-          el.textContent=Math.round(eased*target)+suffix;
-          if(p<1)requestAnimationFrame(step);
-          else el.textContent=target+suffix;
-        }
-        requestAnimationFrame(step);
-        io.unobserve(el);
-      }
-    });
-  },{threshold:0.5});
-  statNums.forEach(el=>io.observe(el));
-
-  /* ========== KEYBOARD FOCUS VISIBILITY ========== */
+  /* ========== KEYBOARD FOCUS ========== */
   document.addEventListener('keydown',e=>{
     if(e.key==='Tab')document.body.classList.add('kb-nav');
   });
@@ -1573,7 +1609,6 @@ body.light .footer-meta:hover{border-color:rgba(184,134,11,0.45)}
   const termsHeader = document.querySelector('.terms-header');
   const termsBody = document.getElementById('termsBody');
 
-  /* ===== Close button ===== */
   const termsCloseBtn = document.createElement('button');
   termsCloseBtn.className = 'terms-close-btn';
   termsCloseBtn.setAttribute('aria-label', 'إغلاق');
@@ -1614,12 +1649,7 @@ body.light .footer-meta:hover{border-color:rgba(184,134,11,0.45)}
       acceptedNotice = document.createElement('div');
       acceptedNotice.id = 'acceptedNotice';
       acceptedNotice.className = 'terms-accepted-notice';
-      acceptedNotice.innerHTML = `
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;flex-shrink:0">
-          <polyline points="20 6 9 17 4 12"/>
-        </svg>
-        <span>لقد وافقت على شروط الاستخدام مسبقًا. الموافقة نهائية ولا يمكن التراجع عنها.</span>
-      `;
+      acceptedNotice.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px"><polyline points="20 6 9 17 4 12"/></svg><span>لقد وافقت على شروط الاستخدام مسبقًا. الموافقة نهائية ولا يمكن التراجع عنها.</span>';
       if (termsFooter) termsFooter.appendChild(acceptedNotice);
     }
     acceptedNotice.style.display = 'flex';
@@ -1685,208 +1715,79 @@ body.light .footer-meta:hover{border-color:rgba(184,134,11,0.45)}
 
   /* ========== PDF DOWNLOAD ========== */
   function downloadTermsPDF() {
-    // جمع معلومات الشروط
     const now = new Date();
     const dateStr = now.toLocaleDateString('ar-EG', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
     const timeStr = now.toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit', hour12: true });
 
-    // استخراج النص من termsBody
-    const termsHTML = termsBody.innerHTML;
-    const termsText = termsBody.innerText;
-
-    // بناء HTML للـ PDF
-    const pdfHTML = `
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<title>شروط الاستخدام — مصنع الصندل للأوعية البلاستيكية</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-  @page { size: A4; margin: 20mm; }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Cairo', Arial, sans-serif;
-    direction: rtl;
-    line-height: 1.7;
-    color: #0A1426;
-    background: #fff;
-    padding: 0;
-  }
-  .pdf-header {
-    text-align: center;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #B8860B;
-    margin-bottom: 24px;
-  }
-  .pdf-brand {
-    font-size: 22px;
-    font-weight: 900;
-    color: #0A1426;
-    margin-bottom: 6px;
-  }
-  .pdf-title {
-    font-size: 18px;
-    font-weight: 800;
-    color: #B8860B;
-    margin-bottom: 4px;
-  }
-  .pdf-sub {
-    font-size: 12px;
-    color: #6B7A90;
-    margin-bottom: 14px;
-  }
-  .pdf-meta {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6px 20px;
-    font-size: 11px;
-    color: #3A4658;
-    background: #F7F9FC;
-    padding: 12px 16px;
-    border-radius: 8px;
-    text-align: right;
-    margin-bottom: 6px;
-  }
-  .pdf-meta strong { color: #0A1426; }
-  .pdf-body { font-size: 12px; }
-  .pdf-body h3 {
-    font-size: 14px;
-    font-weight: 800;
-    color: #B8860B;
-    margin: 18px 0 8px;
-    padding-right: 10px;
-    border-right: 3px solid #B8860B;
-    page-break-after: avoid;
-  }
-  .pdf-body p {
-    font-size: 12px;
-    line-height: 1.8;
-    margin-bottom: 8px;
-    color: #3A4658;
-  }
-  .pdf-body ol {
-    list-style: none;
-    counter-reset: item;
-    padding: 0;
-    margin: 0 0 10px;
-  }
-  .pdf-body ol li {
-    counter-increment: item;
-    font-size: 12px;
-    line-height: 1.8;
-    padding: 6px 36px 6px 0;
-    position: relative;
-    border-bottom: 1px solid #EEF2F8;
-    color: #3A4658;
-  }
-  .pdf-body ol li:last-child { border-bottom: none; }
-  .pdf-body ol li::before {
-    content: counter(item);
-    position: absolute;
-    right: 0;
-    top: 8px;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: #F7F9FC;
-    border: 1px solid #B8860B;
-    color: #B8860B;
-    font-size: 10px;
-    font-weight: 800;
-  }
-  .pdf-body ul { list-style: none; padding: 0; margin: 6px 0 10px; }
-  .pdf-body ul li {
-    font-size: 11px;
-    line-height: 1.7;
-    padding: 3px 18px 3px 0;
-    position: relative;
-    color: #3A4658;
-  }
-  .pdf-body ul li::before {
-    content: '◆';
-    position: absolute;
-    right: 0;
-    top: 3px;
-    color: #B8860B;
-    font-size: 9px;
-  }
-  .pdf-footer {
-    margin-top: 30px;
-    padding-top: 16px;
-    border-top: 1px solid #EEF2F8;
-    text-align: center;
-    font-size: 10px;
-    color: #6B7A90;
-    line-height: 1.8;
-  }
-  .pdf-footer strong { color: #B8860B; }
-  .pdf-accept {
-    margin-top: 20px;
-    padding: 12px 16px;
-    background: #F7F9FC;
-    border-right: 3px solid #22C55E;
-    border-radius: 6px;
-    font-size: 11px;
-    color: #0A1426;
-    text-align: right;
-  }
-  .pdf-accept strong { display: block; margin-bottom: 4px; color: #22C55E; }
-</style>
-</head>
-<body>
-
-<div class="pdf-header">
-  <div class="pdf-brand">مصنع الصندل للأوعية البلاستيكية</div>
-  <div class="pdf-title">شروط استخدام وترخيص نظام مصنع الصندل</div>
-  <div class="pdf-sub">البوابة الرقمية للأنظمة الداخلية — الإصدار 2026</div>
-  <div class="pdf-meta">
-    <div>اسم النظام: <strong>نظام مصنع الصندل لإدارة العمليات والأقسام والمرتبات</strong></div>
-    <div>مالك المصنع: <strong>عصام الجبل</strong></div>
-    <div>المطور: <strong>أحمد حسن حسين</strong></div>
-    <div>الإصدار: <strong>1.0.0</strong></div>
-    <div>Build: <strong>2026.09.15</strong></div>
-    <div>نسخة الشروط: <strong>1.0</strong></div>
-    <div>تاريخ الطباعة: <strong>${dateStr}</strong></div>
-    <div>وقت الطباعة: <strong>${timeStr}</strong></div>
-  </div>
-</div>
-
-<div class="pdf-body">
-${termsHTML}
-</div>
-
-<div class="pdf-footer">
-  <div>© 2026 مصنع الصندل للأوعية البلاستيكية — جميع الحقوق محفوظة</div>
-  <div>هذا المستند صادر إلكترونيًا من البوابة الرقمية الرسمية للمصنع</div>
-  <div>للاستفسار: <strong>الأستاذ/ عصام الجبل</strong> — مطوّر النظام: <strong>أحمد حسن حسين</strong></div>
-</div>
-
-</body>
-</html>
-    `;
-
-    // فتح نافذة جديدة للطباعة
     const printWindow = window.open('', '_blank');
     if (!printWindow) {
       alert('الرجاء السماح بالنوافذ المنبثقة لتنزيل الشروط PDF');
       return;
     }
 
+    let html = '';
+    html += '<!DOCTYPE html><html lang="ar" dir="rtl"><head>';
+    html += '<meta charset="UTF-8">';
+    html += '<title>شروط الاستخدام — مصنع الصندل للأوعية البلاستيكية</title>';
+    html += '<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">';
+    html += '<style>';
+    html += '@page { size: A4; margin: 18mm; }';
+    html += '* { box-sizing: border-box; margin: 0; padding: 0; }';
+    html += 'body { font-family: "Cairo", Arial, sans-serif; direction: rtl; line-height: 1.85; color: #0A1426; background: #fff; padding: 0; font-size: 11pt; }';
+    html += '.pdf-header { text-align: center; padding-bottom: 20px; border-bottom: 2px solid #B8860B; margin-bottom: 22px; }';
+    html += '.pdf-brand { font-size: 22px; font-weight: 900; color: #0A1426; margin-bottom: 6px; }';
+    html += '.pdf-title { font-size: 17px; font-weight: 800; color: #B8860B; margin-bottom: 4px; }';
+    html += '.pdf-sub { font-size: 12px; color: #6B7A90; margin-bottom: 14px; }';
+    html += '.pdf-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 5px 18px; font-size: 10.5pt; color: #3A4658; background: #F7F9FC; padding: 12px 16px; border-radius: 8px; text-align: right; }';
+    html += '.pdf-meta strong { color: #0A1426; }';
+    html += '.pdf-body h3 { font-size: 13pt; font-weight: 800; color: #B8860B; margin: 16px 0 10px; padding-right: 10px; border-right: 3px solid #B8860B; }';
+    html += '.pdf-body p { font-size: 11pt; line-height: 1.9; margin-bottom: 10px; color: #3A4658; }';
+    html += '.pdf-body ol { list-style: none; counter-reset: item; padding: 0; margin: 0 0 12px; }';
+    html += '.pdf-body ol li { counter-increment: item; font-size: 11pt; line-height: 1.9; padding: 8px 38px 8px 0; position: relative; border-bottom: 1px solid #EEF2F8; color: #3A4658; }';
+    html += '.pdf-body ol li:last-child { border-bottom: none; }';
+    html += '.pdf-body ol li::before { content: counter(item); position: absolute; right: 0; top: 10px; width: 26px; height: 26px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #F7F9FC; border: 1px solid #B8860B; color: #B8860B; font-size: 10px; font-weight: 800; }';
+    html += '.pdf-body ul { list-style: none; padding: 0; margin: 6px 0 12px; }';
+    html += '.pdf-body ul li { font-size: 10.5pt; line-height: 1.8; padding: 4px 20px 4px 0; position: relative; color: #3A4658; }';
+    html += '.pdf-body ul li::before { content: "\\25C6"; position: absolute; right: 0; top: 4px; color: #B8860B; font-size: 9px; }';
+    html += '.pdf-footer { margin-top: 30px; padding-top: 16px; border-top: 1px solid #EEF2F8; text-align: center; font-size: 10pt; color: #6B7A90; line-height: 1.9; }';
+    html += '.pdf-footer strong { color: #B8860B; }';
+    html += '</style></head><body>';
+
+    html += '<div class="pdf-header">';
+    html += '<div class="pdf-brand">مصنع الصندل للأوعية البلاستيكية</div>';
+    html += '<div class="pdf-title">شروط استخدام وترخيص نظام مصنع الصندل</div>';
+    html += '<div class="pdf-sub">البوابة الرقمية للأنظمة الداخلية — الإصدار 2026</div>';
+    html += '<div class="pdf-meta">';
+    html += '<div>اسم النظام: <strong>نظام مصنع الصندل لإدارة العمليات والأقسام والمرتبات</strong></div>';
+    html += '<div>مالك المصنع: <strong>عصام الجبل</strong></div>';
+    html += '<div>المطور: <strong>أحمد حسن حسين</strong></div>';
+    html += '<div>الإصدار: <strong>1.0.0</strong></div>';
+    html += '<div>Build: <strong>2026.09.15</strong></div>';
+    html += '<div>نسخة الشروط: <strong>1.0</strong></div>';
+    html += '<div>تاريخ الطباعة: <strong>' + dateStr + '</strong></div>';
+    html += '<div>وقت الطباعة: <strong>' + timeStr + '</strong></div>';
+    html += '</div></div>';
+
+    html += '<div class="pdf-body">';
+    html += termsBody.innerHTML;
+    html += '</div>';
+
+    html += '<div class="pdf-footer">';
+    html += '<div>© 2026 مصنع الصندل للأوعية البلاستيكية — جميع الحقوق محفوظة</div>';
+    html += '<div>هذا المستند صادر إلكترونيًا من البوابة الرقمية الرسمية للمصنع</div>';
+    html += '<div>للاستفسار: <strong>الأستاذ/ عصام الجبل</strong> — مطوّر النظام: <strong>أحمد حسن حسين</strong></div>';
+    html += '</div>';
+
+    html += '</body></html>';
+
     printWindow.document.open();
-    printWindow.document.write(pdfHTML);
+    printWindow.document.write(html);
     printWindow.document.close();
 
-    // انتظار تحميل الخطوط ثم الطباعة
-    printWindow.onload = function() {
-      setTimeout(function() {
-        printWindow.focus();
-        printWindow.print();
-      }, 800);
-    };
+    setTimeout(function() {
+      printWindow.focus();
+      printWindow.print();
+    }, 900);
   }
 
   if (downloadPdfBtn) {
